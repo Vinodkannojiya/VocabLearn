@@ -19,7 +19,6 @@ def get_conn():
 def init_db():
     with get_conn() as conn:
         cur = conn.cursor()
-        cur.execute(''' DROP TABLE IF EXISTS users; ''')
         cur.execute('''
             CREATE TABLE IF NOT EXISTS users (
                 id SERIAL PRIMARY KEY,
@@ -27,7 +26,6 @@ def init_db():
                 password TEXT NOT NULL
             );
         ''')
-        cur.execute(''' DROP TABLE IF EXISTS words; ''')
         cur.execute('''
             CREATE TABLE IF NOT EXISTS words (
                 id SERIAL PRIMARY KEY,
@@ -39,6 +37,9 @@ def init_db():
         cur.execute("SELECT id FROM users WHERE username='admin'")
         if not cur.fetchone():
             cur.execute("INSERT INTO users (username, password) VALUES (%s, %s)", ('admin', 'pass123'))
+        cur.execute("SELECT id FROM users WHERE username='tester'")
+        if not cur.fetchone():
+            cur.execute("INSERT INTO users (username, password) VALUES (%s, %s)", ('tester', 'pass123'))
         conn.commit()
 
 
