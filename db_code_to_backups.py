@@ -2,8 +2,8 @@ import psycopg2
 import csv
 
 # ==== CONFIGURATION ====
-OLD_DB_URL = "postgresql://vinod:p9lYNwXSi0uk6u58QuhL1OtWi5KkC26B@dpg-d1sgub6mcj7s73dmj40g-a.oregon-postgres.render.com/vocablearn"  # Old DB
-NEW_DB_URL = "postgresql://vinod:y5OoM1wBDiEtHTRRhVyDtkhJaT0gUiKt@dpg-d2ffd5be5dus73alv860-a.oregon-postgres.render.com/vocablearn_j20w"  # New DB
+OLD_DB_URL = ""  # Old DB
+NEW_DB_URL = ""  # New DB
 
 USERS_CSV = "users.csv"
 WORDS_CSV = "words.csv"
