@@ -1,496 +1,497 @@
-id,user_id,word,meaning
-1,1,scroll,"स्क्रॉल
+user_id,word,meaning
+1,scroll,"स्क्रॉल
 Examples:
 - I ordered a glass of lemonade and a coffee scroll.
 - She scrolled the offending image out of view."
-3,2,tester,टेस्टर
-4,1,Vocabulary ,"शब्दावली
+2,tester,टेस्टर
+1,Vocabulary ,"शब्दावली
 Examples:
 - My Russian vocabulary is very limited.
 - The vocabulary of social sciences is often incomprehensible to ordinary people."
-5,2,Plug,"प्लग
+2,Plug,"प्लग
 Examples:
 - I pushed the plug back into the electrical socket and the lamp began to glow again.
 - Pull the plug out of the tub so it can drain."
-6,2,Switch,"बदलना
+2,Switch,"बदलना
 Examples:
 - Use the /b switch to specify black-and-white printing.
 - 2004, ""Curt"", Can I use IF statements, and still use switches? (on newsgroup microsoft.public.word.mailmerge.fields)"
-7,2,Door,"दरवाजा
+2,Door,"दरवाजा
 Examples:
 - I knocked on the vice president's door
 - the 24 doors in an Advent calendar"
-8,2,nose,"नाक
+2,nose,"नाक
 Examples:
 - She has a cold in the nose.
 - the nose of a tea-kettle, a bellows, or a fighter plane"
-9,2,hand,"हाथ
+2,hand,"हाथ
 Examples:
 - Her hands are really strong.
 - an old hand at speaking;  large farms need many farm hands"
-10,2,Her hands are really strong.,उसके हाथ वास्तव में मजबूत हैं।
-11,2,mobile,"गतिमान
+2,Her hands are really strong.,उसके हाथ वास्तव में मजबूत हैं।
+2,mobile,"गतिमान
 Examples:
 - there are many business opportunities in mobile
 - a mobile home"
-14,2,beginning,"शुरुआत
+2,beginning,"शुरुआत
 Examples:
 - What was the beginning of the dispute?
 - That house is at the beginning of the street."
-16,2,biginning sound,शुरुआत ध्वनि
-17,2,identify,"पहचान करना
+2,biginning sound,शुरुआत ध्वनि
+2,identify,"पहचान करना
 Examples:
 - The Associated Press will not identify the suspect of the crime because he is a juvenile."
-18,2,center,"केंद्र
+2,center,"केंद्र
 Examples:
 - shopping center, convention center, civic center, garment center, Lincoln Center for the Performing Arts, Rockefeller Center
 - the center of attention"
-19,2,around,"आस-पास
+2,around,"आस-पास
 Examples:
 - Is Clare around today?
 - ""How is old Bob? I heard that his health is failing.""  ""Oh, he's still around. He's feeling better now."""
-20,2,with its sound,इसकी आवाज़ के साथ
-22,2,odd one out in each row,प्रत्येक पंक्ति में एक अजीब
-23,2,uppercase,अपरकेस
-26,2,trace,"पता लगाना
+2,with its sound,इसकी आवाज़ के साथ
+2,odd one out in each row,प्रत्येक पंक्ति में एक अजीब
+2,uppercase,अपरकेस
+2,trace,"पता लगाना
 Examples:
 - Your cell phone company can put a trace on your line.
 - There are traces of chocolate around your lips."
-27,2,each,"प्रत्येक
+2,each,"प्रत्येक
 Examples:
 - The apples cost 50 cents each.
 - From each according to his ability, to each according to his needs."
-28,2,case,"मामला
+2,case,"मामला
 Examples:
 - For a change, in this case, he was telling the truth.
 - It was one of the detective's easiest cases.  Social workers should work on a maximum of forty active cases.  The doctor told us of an interesting case he had treated that morning."
-29,2,same colour,एक ही रंग
-30,2,observe,"निरीक्षण
+2,same colour,एक ही रंग
+2,observe,"निरीक्षण
 Examples:
 - From this vantage point we can observe the behavior of the animals in their natural habitat.
 - Please observe all posted speed limits."
-32,2,vocabulary  development,शब्दावली विकास
-36,1,Particulars ,"विवरण
+2,vocabulary  development,शब्दावली विकास
+1,Particulars ,"विवरण
 Examples:
 - The overall plan is well understood, but we still have to work out the particulars."
-37,1,Data after due date,नियत तिथि के बाद आंकड़ा
-39,2,prompts,"संकेतों
+1,Data after due date,नियत तिथि के बाद आंकड़ा
+2,prompts,"संकेतों
 Examples:
 - I filled in my name where the prompt appeared on the computer screen but my account wasn't recognized.
 - I prompted him to get a new job."
-41,2,holding,"पकड़े
+2,holding,"पकड़े
 Examples:
 - Hold the pencil like this.
 - This package holds six bottles."
-42,2,celebrate,"जश्न मनाना
+2,celebrate,"जश्न मनाना
 Examples:
 - to celebrate the name of the Most High
 - to celebrate a birthday"
-43,2,them,उन्हें
-44,2,them,उन्हें
-45,2,leave,छुट्टी
-46,2,wagging,"लहरदार
+2,them,उन्हें
+2,them,उन्हें
+2,leave,छुट्टी
+2,wagging,"लहरदार
 Examples:
 - the waggings of a dog's tail"
-47,2,tails,"पूंछ
+2,tails,"पूंछ
 Examples:
 - Most primates have a tail and fangs.
 - I'm gonna get me some tail tonight."
-48,2,behind,"पीछे
+2,behind,"पीछे
 Examples:
 - to look behind
 - I'm two weeks behind in my schedule."
-49,2,that,"वह
+2,that,"वह
 Examples:
 - ""The ribbon was that thin."" ""I disagree, I say it was not that thin, it was thicker... or maybe thinner...""
 - I did the run last year, and it wasn't that difficult."
-50,2,trace,"पता लगाना
+2,trace,"पता लगाना
 Examples:
 - Your cell phone company can put a trace on your line.
 - There are traces of chocolate around your lips."
-51,2,both,"दोनों
+2,both,"दोनों
 Examples:
 - ""Did you want this one or that one?"" — ""Give me both.""
 - Both you and I are students."
-52,2,with,"साथ
+2,with,"साथ
 Examples:
 - Do you want to come with?
 - He picked a fight with the class bully."
-54,2,using,"का उपयोग करते हुए
+2,using,"का उपयोग करते हुए
 Examples:
 - soldiers who are used to hardships and danger
 - I used to get things done."
-55,2,labeled,"लेबल
+2,labeled,"लेबल
 Examples:
 - The shop assistant labeled all the products in the shop.
 - He's been unfairly labeled as a cheat, although he's only ever cheated once."
-56,2,where,"कहाँ
+2,where,"कहाँ
 Examples:
 - A good article will cover the who, the what, the when, the where, the why and the how.
 - He asked where I grew up."
-57,2,what,"क्या
+2,what,"क्या
 Examples:
 - The market will calculate these higher risks in their funding costs what might result in higher lending rates.
 - What a beautiful day!"
-58,2,has,"है
+2,has,"है
 Examples:
 - I have a house and a car.
 - Do you have the key? (not necessarily one's own key)"
-59,2,made,बनाया
-60,2,do,"करना
+2,made,बनाया
+2,do,"करना
 Examples:
 - We’re having a bit of a do on Saturday to celebrate my birthday.
 - Nice do!"
-62,2,fruit,"फल
+2,fruit,"फल
 Examples:
 - His long nights in the office eventually bore fruit when his business boomed and he was given a raise.
 - the fresh-squeezed fruit juice; a fruit salad; an artificial fruit flavor; a fruit tree; a fruit bat"
-63,2,beach,समुद्र तट
-64,2,shape,"shape
+2,beach,समुद्र तट
+2,shape,"shape
 Examples:
 - The used bookshop wouldn't offer much due to the poor shape of the book.
 - The vet checked to see what kind of shape the animal was in."
-65,2,here,"here
+2,here,"here
 Examples:
 - An Alzheimer patient's here may in his mind be anywhere he called home in the time he presently re-lives.
 - John here is a rascal."
-66,2,aloud,"aloud
+2,aloud,"aloud
 Examples:
 - Try speaking aloud rather than whispering.
 - speaking aloud rather than thinking thoughts privately"
-67,2,shape,"shape
+2,shape,"shape
 Examples:
 - The used bookshop wouldn't offer much due to the poor shape of the book.
 - The vet checked to see what kind of shape the animal was in."
-68,2,recognition,"recognition
+2,recognition,"recognition
 Examples:
 - He looked at her for ten full minutes before recognition dawned.
 - The law was a recognition of their civil rights."
-69,2,correct,correct
-70,2,reverse,"reverse
+2,correct,correct
+2,reverse,"reverse
 Examples:
 - We believed the Chinese weren't ready for us. In fact, the reverse was true.
 - to reverse a portion of video footage"
-71,2,when,"when
+2,when,"when
 Examples:
 - A good article will cover the who, the what, the when, the where, the why and the how.
 - Do you know when they arrived?"
-72,2,reach,"reach
+2,reach,"reach
 Examples:
 - The fruit is beyond my reach.
 - To call George eloquent is certainly a reach."
-73,2,tracing,"tracing
+2,tracing,"tracing
 Examples:
 - He carefully traced the outlines of the old building before him."
-74,2,patterns,patterns
-75,2,shapes,"shapes
+2,patterns,patterns
+2,shapes,"shapes
 Examples:
 - The used bookshop wouldn't offer much due to the poor shape of the book.
 - The vet checked to see what kind of shape the animal was in."
-76,2,accordingly,accordingly
-77,2,check,"check
+2,accordingly,accordingly
+2,check,"check
 Examples:
 - I don't know if she will be there, but it's worth a check.
 - The castle moat should hold the enemy in check."
-78,2,subitize,subitize
-79,2,corresponding,"corresponding
+2,subitize,subitize
+2,corresponding,"corresponding
 Examples:
 - I've been corresponding with my German pen pal for three years."
-80,2,lowercase,"lowercase
+2,lowercase,"lowercase
 Examples:
 - The strongest passwords are those which mix numbers and letters, upper case and lower case, and symbols."
-81,2,having,"having
+2,having,"having
 Examples:
 - I have a house and a car.
 - Do you have the key? (not necessarily one's own key)"
-82,2,I will do,मैं करूँगा
-83,2,Stone,"पत्थर
+2,I will do,मैं करूँगा
+2,Stone,"पत्थर
 Examples:
 - a peach stone
 - kidney stone"
-84,2,Extensiively,बड़े पैमाने पर
-85,2,Difine stone -stone si an engineering materiel uses extensively for construction,स्टोन -स्टोन को परिभाषित करें एक इंजीनियरिंग सामग्री है जो निर्माण के लिए बड़े पैमाने पर उपयोग की जाती है
-86,2,Stale the qualities of a -soures fo stone: the stones are obtained from rocks a rock represents adefind portion of eacths suriace it is not homogeneous ,बासी एक -soures fo पत्थर के गुण: पत्थर चट्टानों से प्राप्त किए जाते हैं एक चट्टान पृथ्वी की सतह के एडफाइंड हिस्से का प्रतिनिधित्व करता है यह सजातीय नहीं है
-87,2,It has no definite chemical composition and shape Technical the stones are called as rocks. The rocks occur ni great variety .if follows that all rocks may not be useful as building stones. The rocks are available:- 1) Above the ground in the form of mountains and hills. 2) Below the ground which are extremely by the process of mining,इसकी कोई निश्चित रासायनिक संरचना नहीं है और तकनीकी तकनीकी रूप से पत्थरों को चट्टानें कहा जाता है। चट्टानें नी महान विविधता होती हैं। यह इस प्रकार है कि सभी चट्टानें पत्थरों के निर्माण के रूप में उपयोगी नहीं हो सकती हैं। चट्टानें उपलब्ध हैं:- 1) पहाड़ों और पहाड़ियों के रूप में जमीन के ऊपर। 2) जमीन के नीचे जो खनन की प्रक्रिया से बेहद हैं
-88,1,color 6 number,रंग 6 संख्या
-90,1,lock and key,ताला और चाबी
-92,1,computer,कंप्यूटर
-93,1,mouse,"चूहा
+2,Extensiively,बड़े पैमाने पर
+2,Difine stone -stone si an engineering materiel uses extensively for construction,स्टोन -स्टोन को परिभाषित करें एक इंजीनियरिंग सामग्री है जो निर्माण के लिए बड़े पैमाने पर उपयोग की जाती है
+2,Stale the qualities of a -soures fo stone: the stones are obtained from rocks a rock represents adefind portion of eacths suriace it is not homogeneous ,बासी एक -soures fo पत्थर के गुण: पत्थर चट्टानों से प्राप्त किए जाते हैं एक चट्टान पृथ्वी की सतह के एडफाइंड हिस्से का प्रतिनिधित्व करता है यह सजातीय नहीं है
+2,It has no definite chemical composition and shape Technical the stones are called as rocks. The rocks occur ni great variety .if follows that all rocks may not be useful as building stones. The rocks are available:- 1) Above the ground in the form of mountains and hills. 2) Below the ground which are extremely by the process of mining,इसकी कोई निश्चित रासायनिक संरचना नहीं है और तकनीकी तकनीकी रूप से पत्थरों को चट्टानें कहा जाता है। चट्टानें नी महान विविधता होती हैं। यह इस प्रकार है कि सभी चट्टानें पत्थरों के निर्माण के रूप में उपयोगी नहीं हो सकती हैं। चट्टानें उपलब्ध हैं:- 1) पहाड़ों और पहाड़ियों के रूप में जमीन के ऊपर। 2) जमीन के नीचे जो खनन की प्रक्रिया से बेहद हैं
+1,color 6 number,रंग 6 संख्या
+1,lock and key,ताला और चाबी
+1,computer,कंप्यूटर
+1,mouse,"चूहा
 Examples:
 - Captain Higgins moused the hook with a bit of marline to prevent the block beckets from falling out under slack."
-94,1,keyboard,"कीबोर्ड
+1,keyboard,"कीबोर्ड
 Examples:
 - Keyboarding is the part of this job I hate the most."
-95,1,plug,"प्लग
+1,plug,"प्लग
 Examples:
 - I pushed the plug back into the electrical socket and the lamp began to glow again.
 - Pull the plug out of the tub so it can drain."
-96,1,session,"सत्र
+1,session,"सत्र
 Examples:
 - ""Are we having a recording session?"" / ""Yes. We've even got some session musicians to provide some brass.""
 - This court is now in session."
-97,1,work,"काम
+1,work,"काम
 Examples:
 - We don't have much time. Let's get to work piling up those sandbags.
 - Tell me you're using clean works at least."
-98,1,man,"आदमी
+1,man,"आदमी
 Examples:
 - The show is especially popular with middle-aged men.
 - every man for himself"
-99,1,women,औरत
-100,1,fruits,"फल
+1,women,औरत
+1,fruits,"फल
 Examples:
 - His long nights in the office eventually bore fruit when his business boomed and he was given a raise.
 - the fresh-squeezed fruit juice; a fruit salad; an artificial fruit flavor; a fruit tree; a fruit bat"
-101,1,apple,सेब
-102,1,banana,केला
-103,1,papaya,पपीता
-104,1,joker,"जोकर
+1,apple,सेब
+1,banana,केला
+1,papaya,पपीता
+1,joker,"जोकर
 Examples:
 - Some joker keeps throwing eggs at my windows."
-105,1,artist,कलाकार
-106,1,female,"महिला
+1,artist,कलाकार
+1,female,"महिला
 Examples:
 - female authors, the leading male and female artists, a female bird cooing at a male, intersex female patients, a trans female vlogger
 - stereotypically female pastimes, an insect with typically female coloration"
-107,1,male,"पुरुष
+1,male,"पुरुष
 Examples:
 - a male bird feeding a seed to a female
 - stereotypically male interests, an insect with typically male coloration"
-108,1,goggle,आंख मारना
-109,1,water bottle,पानी की बोतल
-110,1,purse,बटुआ
-111,1,plug and wire,प्लग एंड वायर
-112,1,laptop screen,लैपटॉप स्क्रीन
-113,1,camera,झगड़ा
-114,1,my mobile is very nice,मेरा मोबाइल बहुत अच्छा है
-115,1,take care,अपना ध्यान रखना
-116,1,welcome,"स्वागत
+1,goggle,आंख मारना
+1,water bottle,पानी की बोतल
+1,purse,बटुआ
+1,plug and wire,प्लग एंड वायर
+1,laptop screen,लैपटॉप स्क्रीन
+1,camera,झगड़ा
+1,my mobile is very nice,मेरा मोबाइल बहुत अच्छा है
+1,take care,अपना ध्यान रखना
+1,welcome,"स्वागत
 Examples:
 - We entered the house and found a ready welcome.
 - We welcome suggestions for improvement."
-117,1,sweet corn,स्वीट कॉर्न
-118,1,microsoft,माइक्रोसॉफ्ट
-119,1,google,गूगल
-120,1,handle with care,ध्यान से संभालें
-121,1,song,"गाना
+1,sweet corn,स्वीट कॉर्न
+1,microsoft,माइक्रोसॉफ्ट
+1,google,गूगल
+1,handle with care,ध्यान से संभालें
+1,song,"गाना
 Examples:
 - Thomas listened to his favorite song on the radio yesterday.
 - I love hearing the song of canary birds."
-122,1,songs,"गीत
+1,songs,"गीत
 Examples:
 - Thomas listened to his favorite song on the radio yesterday.
 - I love hearing the song of canary birds."
-123,1,music,"संगीत
+1,music,"संगीत
 Examples:
 - I keep listening to this music because it's a masterpiece."
-124,1,tune,"धुन
+1,tune,"धुन
 Examples:
 - Your engine needs a good tune.
 - This piano is not in tune."
-125,1,lyrics,"गीत
+1,lyrics,"गीत
 Examples:
 - The lyric in line 3 doesn't rhyme."
-126,1,composer,संगीतकार
-127,4,1st word added by myself,पहला शब्द जो खुद से जोड़ा गया
-128,11,tester,टेस्टर
-129,11,Plug,"प्लग
+1,composer,संगीतकार
+4,1st word added by myself,पहला शब्द जो खुद से जोड़ा गया
+11,tester,टेस्टर
+11,Plug,"प्लग
 Examples:
 - I pushed the plug back into the electrical socket and the lamp began to glow again.
 - Pull the plug out of the tub so it can drain."
-130,11,Switch,"बदलना
+11,Switch,"बदलना
 Examples:
 - Use the /b switch to specify black-and-white printing.
 - 2004, ""Curt"", Can I use IF statements, and still use switches? (on newsgroup microsoft.public.word.mailmerge.fields)"
-131,11,Door,"दरवाजा
+11,Door,"दरवाजा
 Examples:
 - I knocked on the vice president's door
 - the 24 doors in an Advent calendar"
-132,11,nose,"नाक
+11,nose,"नाक
 Examples:
 - She has a cold in the nose.
 - the nose of a tea-kettle, a bellows, or a fighter plane"
-133,11,hand,"हाथ
+11,hand,"हाथ
 Examples:
 - Her hands are really strong.
 - an old hand at speaking;  large farms need many farm hands"
-134,11,Her hands are really strong.,उसके हाथ वास्तव में मजबूत हैं।
-135,11,mobile,"गतिमान
+11,Her hands are really strong.,उसके हाथ वास्तव में मजबूत हैं।
+11,mobile,"गतिमान
 Examples:
 - there are many business opportunities in mobile
 - a mobile home"
-136,11,beginning,"शुरुआत
+11,beginning,"शुरुआत
 Examples:
 - What was the beginning of the dispute?
 - That house is at the beginning of the street."
-137,11,biginning sound,शुरुआत ध्वनि
-138,11,identify,"पहचान करना
+11,biginning sound,शुरुआत ध्वनि
+11,identify,"पहचान करना
 Examples:
 - The Associated Press will not identify the suspect of the crime because he is a juvenile."
-139,11,center,"केंद्र
+11,center,"केंद्र
 Examples:
 - shopping center, convention center, civic center, garment center, Lincoln Center for the Performing Arts, Rockefeller Center
 - the center of attention"
-140,11,around,"आस-पास
+11,around,"आस-पास
 Examples:
 - Is Clare around today?
 - ""How is old Bob? I heard that his health is failing.""  ""Oh, he's still around. He's feeling better now."""
-141,11,with its sound,इसकी आवाज़ के साथ
-142,11,odd one out in each row,प्रत्येक पंक्ति में एक अजीब
-143,11,uppercase,अपरकेस
-144,11,trace,"पता लगाना
+11,with its sound,इसकी आवाज़ के साथ
+11,odd one out in each row,प्रत्येक पंक्ति में एक अजीब
+11,uppercase,अपरकेस
+11,trace,"पता लगाना
 Examples:
 - Your cell phone company can put a trace on your line.
 - There are traces of chocolate around your lips."
-145,11,each,"प्रत्येक
+11,each,"प्रत्येक
 Examples:
 - The apples cost 50 cents each.
 - From each according to his ability, to each according to his needs."
-146,11,case,"मामला
+11,case,"मामला
 Examples:
 - For a change, in this case, he was telling the truth.
 - It was one of the detective's easiest cases.  Social workers should work on a maximum of forty active cases.  The doctor told us of an interesting case he had treated that morning."
-147,11,same colour,एक ही रंग
-148,11,observe,"निरीक्षण
+11,same colour,एक ही रंग
+11,observe,"निरीक्षण
 Examples:
 - From this vantage point we can observe the behavior of the animals in their natural habitat.
 - Please observe all posted speed limits."
-149,11,vocabulary  development,शब्दावली विकास
-150,11,prompts,"संकेतों
+11,vocabulary  development,शब्दावली विकास
+11,prompts,"संकेतों
 Examples:
 - I filled in my name where the prompt appeared on the computer screen but my account wasn't recognized.
 - I prompted him to get a new job."
-151,11,holding,"पकड़े
+11,holding,"पकड़े
 Examples:
 - Hold the pencil like this.
 - This package holds six bottles."
-152,11,celebrate,"जश्न मनाना
+11,celebrate,"जश्न मनाना
 Examples:
 - to celebrate the name of the Most High
 - to celebrate a birthday"
-153,11,them,उन्हें
-154,11,them,उन्हें
-155,11,leave,छुट्टी
-156,11,wagging,"लहरदार
+11,them,उन्हें
+11,them,उन्हें
+11,leave,छुट्टी
+11,wagging,"लहरदार
 Examples:
 - the waggings of a dog's tail"
-157,11,tails,"पूंछ
+11,tails,"पूंछ
 Examples:
 - Most primates have a tail and fangs.
 - I'm gonna get me some tail tonight."
-158,11,behind,"पीछे
+11,behind,"पीछे
 Examples:
 - to look behind
 - I'm two weeks behind in my schedule."
-159,11,that,"वह
+11,that,"वह
 Examples:
 - ""The ribbon was that thin."" ""I disagree, I say it was not that thin, it was thicker... or maybe thinner...""
 - I did the run last year, and it wasn't that difficult."
-160,11,trace,"पता लगाना
+11,trace,"पता लगाना
 Examples:
 - Your cell phone company can put a trace on your line.
 - There are traces of chocolate around your lips."
-161,11,both,"दोनों
+11,both,"दोनों
 Examples:
 - ""Did you want this one or that one?"" — ""Give me both.""
 - Both you and I are students."
-162,11,with,"साथ
+11,with,"साथ
 Examples:
 - Do you want to come with?
 - He picked a fight with the class bully."
-163,11,using,"का उपयोग करते हुए
+11,using,"का उपयोग करते हुए
 Examples:
 - soldiers who are used to hardships and danger
 - I used to get things done."
-164,11,labeled,"लेबल
+11,labeled,"लेबल
 Examples:
 - The shop assistant labeled all the products in the shop.
 - He's been unfairly labeled as a cheat, although he's only ever cheated once."
-165,11,where,"कहाँ
+11,where,"कहाँ
 Examples:
 - A good article will cover the who, the what, the when, the where, the why and the how.
 - He asked where I grew up."
-166,11,what,"क्या
+11,what,"क्या
 Examples:
 - The market will calculate these higher risks in their funding costs what might result in higher lending rates.
 - What a beautiful day!"
-167,11,has,"है
+11,has,"है
 Examples:
 - I have a house and a car.
 - Do you have the key? (not necessarily one's own key)"
-168,11,made,बनाया
-169,11,do,"करना
+11,made,बनाया
+11,do,"करना
 Examples:
 - We’re having a bit of a do on Saturday to celebrate my birthday.
 - Nice do!"
-170,11,fruit,"फल
+11,fruit,"फल
 Examples:
 - His long nights in the office eventually bore fruit when his business boomed and he was given a raise.
 - the fresh-squeezed fruit juice; a fruit salad; an artificial fruit flavor; a fruit tree; a fruit bat"
-171,11,beach,समुद्र तट
-172,11,shape,"shape
+11,beach,समुद्र तट
+11,shape,"shape
 Examples:
 - The used bookshop wouldn't offer much due to the poor shape of the book.
 - The vet checked to see what kind of shape the animal was in."
-173,11,here,"here
+11,here,"here
 Examples:
 - An Alzheimer patient's here may in his mind be anywhere he called home in the time he presently re-lives.
 - John here is a rascal."
-174,11,aloud,"aloud
+11,aloud,"aloud
 Examples:
 - Try speaking aloud rather than whispering.
 - speaking aloud rather than thinking thoughts privately"
-175,11,shape,"shape
+11,shape,"shape
 Examples:
 - The used bookshop wouldn't offer much due to the poor shape of the book.
 - The vet checked to see what kind of shape the animal was in."
-176,11,recognition,"recognition
+11,recognition,"recognition
 Examples:
 - He looked at her for ten full minutes before recognition dawned.
 - The law was a recognition of their civil rights."
-177,11,correct,correct
-178,11,reverse,"reverse
+11,correct,correct
+11,reverse,"reverse
 Examples:
 - We believed the Chinese weren't ready for us. In fact, the reverse was true.
 - to reverse a portion of video footage"
-179,11,when,"when
+11,when,"when
 Examples:
 - A good article will cover the who, the what, the when, the where, the why and the how.
 - Do you know when they arrived?"
-180,11,reach,"reach
+11,reach,"reach
 Examples:
 - The fruit is beyond my reach.
 - To call George eloquent is certainly a reach."
-181,11,tracing,"tracing
+11,tracing,"tracing
 Examples:
 - He carefully traced the outlines of the old building before him."
-182,11,patterns,patterns
-183,11,shapes,"shapes
+11,patterns,patterns
+11,shapes,"shapes
 Examples:
 - The used bookshop wouldn't offer much due to the poor shape of the book.
 - The vet checked to see what kind of shape the animal was in."
-184,11,accordingly,accordingly
-185,11,check,"check
+11,accordingly,accordingly
+11,check,"check
 Examples:
 - I don't know if she will be there, but it's worth a check.
 - The castle moat should hold the enemy in check."
-186,11,subitize,subitize
-187,11,corresponding,"corresponding
+11,subitize,subitize
+11,corresponding,"corresponding
 Examples:
 - I've been corresponding with my German pen pal for three years."
-188,11,lowercase,"lowercase
+11,lowercase,"lowercase
 Examples:
 - The strongest passwords are those which mix numbers and letters, upper case and lower case, and symbols."
-189,11,having,"having
+11,having,"having
 Examples:
 - I have a house and a car.
 - Do you have the key? (not necessarily one's own key)"
-190,11,I will do,मैं करूँगा
-191,11,Stone,"पत्थर
+11,I will do,मैं करूँगा
+11,Stone,"पत्थर
 Examples:
 - a peach stone
 - kidney stone"
-192,11,Extensiively,बड़े पैमाने पर
-193,11,Difine stone -stone si an engineering materiel uses extensively for construction,स्टोन -स्टोन को परिभाषित करें एक इंजीनियरिंग सामग्री है जो निर्माण के लिए बड़े पैमाने पर उपयोग की जाती है
-194,11,Stale the qualities of a -soures fo stone: the stones are obtained from rocks a rock represents adefind portion of eacths suriace it is not homogeneous ,बासी एक -soures fo पत्थर के गुण: पत्थर चट्टानों से प्राप्त किए जाते हैं एक चट्टान पृथ्वी की सतह के एडफाइंड हिस्से का प्रतिनिधित्व करता है यह सजातीय नहीं है
-195,11,It has no definite chemical composition and shape Technical the stones are called as rocks. The rocks occur ni great variety .if follows that all rocks may not be useful as building stones. The rocks are available:- 1) Above the ground in the form of mountains and hills. 2) Below the ground which are extremely by the process of mining,इसकी कोई निश्चित रासायनिक संरचना नहीं है और तकनीकी तकनीकी रूप से पत्थरों को चट्टानें कहा जाता है। चट्टानें नी महान विविधता होती हैं। यह इस प्रकार है कि सभी चट्टानें पत्थरों के निर्माण के रूप में उपयोगी नहीं हो सकती हैं। चट्टानें उपलब्ध हैं:- 1) पहाड़ों और पहाड़ियों के रूप में जमीन के ऊपर। 2) जमीन के नीचे जो खनन की प्रक्रिया से बेहद हैं
+11,Extensiively,बड़े पैमाने पर
+11,Difine stone -stone si an engineering materiel uses extensively for construction,स्टोन -स्टोन को परिभाषित करें एक इंजीनियरिंग सामग्री है जो निर्माण के लिए बड़े पैमाने पर उपयोग की जाती है
+11,Stale the qualities of a -soures fo stone: the stones are obtained from rocks a rock represents adefind portion of eacths suriace it is not homogeneous ,बासी एक -soures fo पत्थर के गुण: पत्थर चट्टानों से प्राप्त किए जाते हैं एक चट्टान पृथ्वी की सतह के एडफाइंड हिस्से का प्रतिनिधित्व करता है यह सजातीय नहीं है
+11,It has no definite chemical composition and shape Technical the stones are called as rocks. The rocks occur ni great variety .if follows that all rocks may not be useful as building stones. The rocks are available:- 1) Above the ground in the form of mountains and hills. 2) Below the ground which are extremely by the process of mining,इसकी कोई निश्चित रासायनिक संरचना नहीं है और तकनीकी तकनीकी रूप से पत्थरों को चट्टानें कहा जाता है। चट्टानें नी महान विविधता होती हैं। यह इस प्रकार है कि सभी चट्टानें पत्थरों के निर्माण के रूप में उपयोगी नहीं हो सकती हैं। चट्टानें उपलब्ध हैं:- 1) पहाड़ों और पहाड़ियों के रूप में जमीन के ऊपर। 2) जमीन के नीचे जो खनन की प्रक्रिया से बेहद हैं
+1,adding new words,नए शब्द जोड़ना

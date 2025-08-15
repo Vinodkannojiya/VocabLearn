@@ -18,7 +18,7 @@ def export_to_csv():
         cur = conn.cursor()
 
         # Export users table
-        cur.execute("SELECT * FROM users;")
+        cur.execute("SELECT id,username, password FROM users;")
         rows = cur.fetchall()
         with open(USERS_CSV, "w", newline="", encoding="utf-8") as f:
             writer = csv.writer(f)
@@ -26,7 +26,7 @@ def export_to_csv():
             writer.writerows(rows)
 
         # Export words table
-        cur.execute("SELECT * FROM words;")
+        cur.execute("SELECT user_id,word,meaning FROM words;")
         rows = cur.fetchall()
         with open(WORDS_CSV, "w", newline="", encoding="utf-8") as f:
             writer = csv.writer(f)
@@ -39,6 +39,8 @@ def export_to_csv():
 def create_tables():
     with get_conn(NEW_DB_URL) as conn:
         cur = conn.cursor()
+        cur.execute(''' DROP TABLE IF EXISTS words; ''')
+        cur.execute(''' DROP TABLE IF EXISTS users; ''')
         cur.execute('''
             CREATE TABLE IF NOT EXISTS users (
                 id SERIAL PRIMARY KEY,
@@ -70,25 +72,43 @@ def import_from_csv():
                     INSERT INTO users (id, username, password)
                     VALUES (%s, %s, %s)
                 """, (row["id"], row["username"], row["password"]))
+        print("✅ Data imported into users")
 
         # Insert into words
         with open(WORDS_CSV, newline="", encoding="utf-8") as f:
             reader = csv.DictReader(f)
             for row in reader:
                 cur.execute("""
-                    INSERT INTO words (id, user_id, word, meaning)
-                    VALUES (%s, %s, %s, %s)
-                """, (row["id"], row["user_id"], row["word"], row["meaning"]))
+                    INSERT INTO words (user_id, word, meaning)
+                    VALUES (%s, %s, %s)
+                """, (row["user_id"], row["word"], row["meaning"]))
+        print("✅ Data imported into words")
 
         conn.commit()
         print("✅ Data imported into new DB")
 
+
+def print_table_results():
+    with get_conn(NEW_DB_URL) as conn:
+        cur = conn.cursor()
+        cur.execute("SELECT * FROM users ")
+        rows = cur.fetchall()  # Gets all rows from the query result
+        for row in rows:
+            print(row)
+        cur.execute("SELECT * FROM words ")
+        rows = cur.fetchall()  # Gets all rows from the query result
+        for row in rows:
+            print(row)
+
+
 # ==== MAIN ====
 if __name__ == "__main__":
     # Run below 1st  to take backup
-    export_to_csv()
+    # export_to_csv()
     # After above function complete delete postre sql db and create new and update URL
     # after new db created run below 2 funtions
     # create_tables()
     # import_from_csv()
+    # to see list of records from database
+    print_table_results()
     print("🎯 Migration complete!")
