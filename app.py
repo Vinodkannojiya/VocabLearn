@@ -10,6 +10,8 @@ translator = Translator()
 
 # --- PostgreSQL Config ---
 DATABASE_URL = os.environ["DATABASE_INTERNAL_URL"]
+# add below value during local testing
+# DATABASE_URL = "NEED TO UDASET FROM RENDER"
 
 
 def get_conn():
@@ -34,12 +36,26 @@ def init_db():
                 meaning TEXT
             );
         ''')
+        users = [
+            ('admin', 'pass123'),
+            ('vinod', 'pass123'),
+            ('pramod', 'pass123'),
+            ('manoj', 'pass123'),
+            ('hemlata', 'pass123'),
+            ('sangita', 'pass123'),
+            ('devraj', 'pass123'),
+            ('kunal', 'pass123'),
+            ('sonakshi', 'pass123'),
+            ('samar', 'pass123'),
+            ('arya', 'pass123'),
+            ('janvi', 'pass123'),
+            ('neel', 'pass123'),
+            ('user', 'pass123')
+        ]
+
         cur.execute("SELECT id FROM users WHERE username='admin'")
         if not cur.fetchone():
-            cur.execute("INSERT INTO users (username, password) VALUES (%s, %s)", ('admin', 'pass123'))
-        cur.execute("SELECT id FROM users WHERE username='tester'")
-        if not cur.fetchone():
-            cur.execute("INSERT INTO users (username, password) VALUES (%s, %s)", ('tester', 'pass123'))
+            cur.executemany("INSERT INTO users (username, password) VALUES (%s, %s)", users)
         conn.commit()
 
 
@@ -162,105 +178,183 @@ def add_word():
 
     message = None
     if request.method == 'POST':
-        word = request.form['word']
-        hindi_meaning = translator.translate(word, src='en', dest='hi').text
-        example_sentences = []
-
-        try:
-            res = requests.get(f"https://api.dictionaryapi.dev/api/v2/entries/en/{word}")
-            if res.status_code == 200:
-                for meaning in res.json()[0].get('meanings', []):
-                    for d in meaning.get('definitions', []):
-                        if 'example' in d:
-                            example_sentences.append(d['example'])
-                        if len(example_sentences) >= 2:
-                            break
-                    if len(example_sentences) >= 2:
-                        break
-        except:
-            pass
-
-        full_meaning = hindi_meaning
-        if example_sentences:
-            full_meaning += "\nExamples:\n" + "\n".join(f"- {e}" for e in example_sentences)
+        words = request.form.getlist('word[]')
 
         with get_conn() as conn:
             cur = conn.cursor()
-            cur.execute("INSERT INTO words (user_id, word, meaning) VALUES (%s, %s, %s)",
-                        (session['user_id'], word, full_meaning))
+
+            for word in words:
+                word = word.strip()
+                if not word:
+                    continue
+
+                # Auto-translate and get examples
+                hindi_meaning = translator.translate(word, src='en', dest='hi').text
+                example_sentences = []
+                try:
+                    res = requests.get(f"https://api.dictionaryapi.dev/api/v2/entries/en/{word}")
+                    if res.status_code == 200:
+                        for meaning_data in res.json()[0].get('meanings', []):
+                            for d in meaning_data.get('definitions', []):
+                                if 'example' in d:
+                                    example_sentences.append(d['example'])
+                                if len(example_sentences) >= 2:
+                                    break
+                            if len(example_sentences) >= 2:
+                                break
+                except:
+                    pass
+
+                full_meaning = hindi_meaning
+                if example_sentences:
+                    full_meaning += "\nExamples:\n" + "\n".join(f"- {e}" for e in example_sentences)
+
+                cur.execute(
+                    "INSERT INTO words (user_id, word, meaning) VALUES (%s, %s, %s)",
+                    (session['user_id'], word, full_meaning)
+                )
+
             conn.commit()
-            message = f"✅ Word '{word}' added!"
+            message = f"✅ {len(words)} word(s) added!"
 
     form = '''
-    <h2>Add Word</h2>
+    <h2 class="text-center mb-4" style="font-family:'Poppins',sans-serif; font-weight:600;">Add Words</h2>
     {% if message %}
         <div class="alert alert-success">{{ message }}</div>
     {% endif %}
-    <form method="POST" class="card p-3 shadow-sm">
-      <div class="mb-3">
-        <label>English Word:</label>
-        <input name="word" class="form-control" required>
-      </div>
-      <button type="submit" class="btn btn-success">Add Word</button>
+    <form method="POST" class="card p-3 shadow-sm" id="addWordsForm">
+        <div id="wordFields">
+            <div class="word-row mb-2 d-flex">
+                <input type="text" name="word[]" class="form-control me-2" placeholder="English Word" required>
+                <button type="button" class="btn btn-success add-btn">+</button>
+            </div>
+        </div>
+        <div class="mt-3 d-flex justify-content-center gap-3">
+            <button type="submit" class="btn btn-outline-primary btn-rounded px-4">SAVE WORDS</button>
+            <a href="/home" class="btn btn-outline-success btn-rounded px-4">HOME</a>
+        </div>
     </form>
-    <a href="/home" class="btn btn-link mt-2">⬅️ Back to Home</a>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const wordFields = document.getElementById("wordFields");
+
+        wordFields.addEventListener("click", function(e) {
+            if (e.target.classList.contains("add-btn")) {
+                e.preventDefault();
+                const newRow = document.createElement("div");
+                newRow.classList.add("word-row", "mb-2", "d-flex");
+                newRow.innerHTML = `
+                    <input type="text" name="word[]" class="form-control me-2" placeholder="English Word" required>
+                    <button type="button" class="btn btn-danger remove-btn">-</button>
+                `;
+                wordFields.appendChild(newRow);
+            } else if (e.target.classList.contains("remove-btn")) {
+                e.preventDefault();
+                e.target.closest(".word-row").remove();
+            }
+        });
+    });
+    </script>
     '''
     return render_template_string(base_template, content=render_template_string(form, message=message),
-                                  title="Add Word")
+                                  title="Add Words")
 
 
-@app.route('/word_history', methods=['GET', 'POST'])
+
+
+
+@app.route('/word_history')
 def word_history():
     if 'user_id' not in session:
         return redirect('/')
 
+    page = int(request.args.get('page', 1))
+    per_page = 10
+    offset = (page - 1) * per_page
+
     with get_conn() as conn:
         cur = conn.cursor()
-        if request.method == 'POST' and 'delete' in request.form:
-            cur.execute("DELETE FROM words WHERE user_id=%s AND word=%s", (session['user_id'], request.form['delete']))
-            conn.commit()
-            session['word_index'] = 0
-            message = f"✅ Word '{request.form['delete']}' deleted!"
-        else:
-            message = None
 
-        cur.execute("SELECT word, meaning FROM words WHERE user_id=%s", (session['user_id'],))
-        word_list = cur.fetchall()
+        # Count total words
+        cur.execute("SELECT COUNT(*) FROM words WHERE user_id=%s", (session['user_id'],))
+        total_words = cur.fetchone()[0]
 
-    if not word_list:
-        return render_with_base("<p>No words added yet.</p><a href='/home'>⬅️ Back to Home</a>")
+        # Fetch paginated words
+        cur.execute("""
+            SELECT word, meaning FROM words
+            WHERE user_id=%s
+            ORDER BY id DESC
+            LIMIT %s OFFSET %s
+        """, (session['user_id'], per_page, offset))
+        words = cur.fetchall()
 
-    index = session.get('word_index', 0)
-    if index >= len(word_list):
-        index = 0
-        session['word_index'] = 0
+    total_pages = (total_words + per_page - 1) // per_page
 
-    show_meaning = False
-    if request.method == 'POST':
-        if 'next' in request.form:
-            index = (index + 1) % len(word_list)
-            session['word_index'] = index
-        elif 'meaning' in request.form:
-            show_meaning = True
+    # Bootstrap bright colors
+    colors = [
+        "primary", "success", "danger", "warning", "info",
+        "secondary", "dark"
+    ]
 
-    word, meaning = word_list[index]
-    formatted_meaning = meaning.replace("\n", "<br>")
+    # Generate HTML blocks
+    word_blocks = ""
+    for idx, (w, m) in enumerate(words, start=1):
+        color_class = colors[(idx - 1) % len(colors)]
+        formatted_meaning = m.replace("\n", "<br>")
 
-    content = f'''
-    <h2>Word History</h2>
-    {'<div class="alert alert-success">' + message + '</div>' if message else ''}
-    <div class="card p-3 shadow-sm">
-        <p><b>Word:</b> {word}</p>
-        {"<p><b>Meaning:</b><br>" + formatted_meaning + "</p>" if show_meaning else ""}
-        <form method="POST" class="d-flex gap-2 flex-wrap">
-            <button name="meaning" type="submit" class="btn btn-info">Get Meaning</button>
-            <button name="next" type="submit" class="btn btn-secondary">Next</button>
-            <button name="delete" value="{word}" onclick="return confirm('Are you sure?')" class="btn btn-danger">Delete</button>
-        </form>
-    </div>
-    <a href="/home" class="btn btn-link mt-2">⬅️ Back to Home</a>
-    '''
-    return render_with_base(content)
+        word_blocks += f"""
+        <div class="mb-3">
+            <button class="btn btn-{color_class} w-100 text-start" 
+                    style="border-radius: 25px; font-family: 'Poppins', sans-serif; 
+                           font-size: 1.15rem; font-weight: 600; padding: 12px 16px; 
+                           text-transform: capitalize;"
+                    onclick="toggleMeaning('meaning_{idx}')">
+                {idx}. {w}
+            </button>
+            <div id="meaning_{idx}" 
+                 class="p-3 mt-1 rounded text-white" 
+                 style="display:none; background-color: var(--bs-{color_class}-rgb, var(--bs-{color_class})); 
+                        background-color: rgba(var(--bs-{color_class}-rgb), 0.85); 
+                        font-size: 1rem; font-weight: 500;">
+                {formatted_meaning}
+            </div>
+        </div>
+        """
+
+    # Navigation buttons
+    pagination_html = '<div class="d-flex justify-content-between mt-4">'
+    if page > 1:
+        pagination_html += f'<a href="?page={page - 1}" class="btn btn-outline-primary btn-rounded px-4">⬅ PREV</a>'
+    else:
+        pagination_html += '<span></span>'
+    pagination_html += '<a href="/home" class="btn btn-outline-success btn-rounded px-4">HOME</a>'
+    if page < total_pages:
+        pagination_html += f'<a href="?page={page + 1}" class="btn btn-outline-primary btn-rounded px-4">NEXT ➡</a>'
+    pagination_html += '</div>'
+
+    # JS toggle
+    js_script = """
+    <script>
+    function toggleMeaning(id) {
+        var el = document.getElementById(id);
+        if (el.style.display === "none") {
+            el.style.display = "block";
+        } else {
+            el.style.display = "none";
+        }
+    }
+    </script>
+    """
+
+    content = f"""
+    <h2 class="text-center mb-4" style="font-family:'Poppins',sans-serif; font-weight:600;">Word History</h2>
+    {word_blocks}
+    {pagination_html}
+    {js_script}
+    """
+
+    return render_with_base(content, "Word History")
 
 
 @app.route('/logout')
